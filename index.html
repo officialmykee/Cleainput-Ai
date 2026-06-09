@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Voice Assistant</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+
+    /* Similar to the image you sent */
+    background:
+    radial-gradient(
+        circle at top left,
+        rgba(255,210,240,.9),
+        rgba(240,235,255,.9) 45%,
+        rgba(228,240,255,.95) 100%
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Optional subtle dot pattern */
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+        radial-gradient(
+            rgba(120,120,120,.12) 1px,
+            transparent 1px
+        );
+    background-size:18px 18px;
+    pointer-events:none;
+}
+
+.screen{
+    width:100%;
+    max-width:900px;
+    text-align:center;
+    position:relative;
+    z-index:1;
+}
+
+h1{
+    color:#3a4f85;
+    font-size:clamp(32px,5vw,64px);
+    line-height:1.2;
+    margin-bottom:70px;
+}
+
+/* Voice Wave */
+.wave{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    height:140px;
+}
+
+.blob{
+    width:18px;
+    border-radius:999px;
+    animation:talk 1.2s ease-in-out infinite;
+}
+
+.blob:nth-child(1){
+    height:20px;
+    background:#ffd84d;
+    animation-delay:.1s;
+}
+
+.blob:nth-child(2){
+    height:40px;
+    background:#61dafb;
+    animation-delay:.2s;
+}
+
+.blob:nth-child(3){
+    height:65px;
+    background:#ff6b8a;
+    animation-delay:.3s;
+}
+
+.blob:nth-child(4){
+    height:95px;
+    background:#7c83ff;
+    animation-delay:.4s;
+}
+
+.blob:nth-child(5){
+    height:120px;
+    background:#4ea7ff;
+    animation-delay:.5s;
+}
+
+.blob:nth-child(6){
+    height:95px;
+    background:#a855f7;
+    animation-delay:.4s;
+}
+
+.blob:nth-child(7){
+    height:65px;
+    background:#e879f9;
+    animation-delay:.3s;
+}
+
+.blob:nth-child(8){
+    height:40px;
+    background:#d946ef;
+    animation-delay:.2s;
+}
+
+.blob:nth-child(9){
+    height:20px;
+    background:#c026d3;
+    animation-delay:.1s;
+}
+
+@keyframes talk{
+
+    0%,100%{
+        transform:scaleY(.25);
+    }
+
+    25%{
+        transform:scaleY(.8);
+    }
+
+    50%{
+        transform:scaleY(1.45);
+    }
+
+    75%{
+        transform:scaleY(.7);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="screen">
+
+    <h1>
+        Talk to your<br>
+        AI assistant now
+    </h1>
+
+    <div class="wave">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
